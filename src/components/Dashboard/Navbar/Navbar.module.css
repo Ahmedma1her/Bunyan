@@ -1,0 +1,35 @@
+nav{
+    border-bottom: 2px solid #dee2e6;
+    padding: 0.5rem 1.5rem;
+    height: 6rem;
+}
+.parentImg img{
+     height: auto;
+    width: 4rem;
+    
+}
+.notificationSection{
+    color: var(--main-color);
+    size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+}
+.countnoti{
+    position: absolute;
+    top:-8px;
+    font-size: 0.7rem;
+    right: -3.5px;
+    padding: 0.5px 4px;
+}
+
+.avatar{
+height: 40px;
+width: 40px;
+border-radius: 50%;
+background-color: var(--hover-color);
+color: var(--white-color);
+display: flex;
+justify-content: center;
+align-items : center;
+font-size: 1.2rem;
+}

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Spicy+Rice&display=swap');
+
+:root{
+  --main-color:#00315E;
+  --white-color:#fff;
+  --second-color:#4FB7B3;
+  --hover-color:#6EC1E4;
+  --text-color:#0F172A;
+}
+*{
+  padding: 0;
+  margin: 0;
+    font-family: "Cairo", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--hover-color);
+  color: var(--text-color);
+}
+nav{
+  background-color: var(--white-color);
+}
