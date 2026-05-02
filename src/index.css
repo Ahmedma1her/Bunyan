@@ -14,9 +14,9 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--hover-color);
+  background-color: var(--white-color);
   color: var(--text-color);
 }
-nav{
+ nav{
   background-color: var(--white-color);
 }

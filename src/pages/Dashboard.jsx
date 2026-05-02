@@ -5,8 +5,15 @@ function Dashboard(){
     return(
         <>
          <Navbar adminName="Ahmed" />
-        <h1>test board</h1>
+        <div className="d-flex"> 
+           
        <Sidebar />
+
+<main className="flex-grow-1"><h1>test board</h1></main>
+        
+       </div>
+       
+
        <Footer/>
 
         </>
