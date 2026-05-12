@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from'../../../assets/axis logo.png'
 import Style from './Navbar.module.css'
 export default function Navbar({adminName ="Admin"}) {

@@ -4,5 +4,18 @@
 }
 
 .sidebar nav{
-    
+    background-color: var(--main-color);
 }
+
+.navItem{
+    color: var(--white-color);
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 1s ;
+}
+.navItem:hover{
+ 
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem 1rem;
+}
+
