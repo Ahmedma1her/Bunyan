@@ -1,8 +1,10 @@
 import {Outlet} from "react-router-dom";
 
 function Projects(){
-return <>
-<Outlet/>
-</>
+return (
+<section>
+ <Outlet />
+</section>
+)
 }
 export default Projects
