@@ -4,7 +4,6 @@ function FormDashboard({ sectionKey, setDirtySections }) {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    checked: false,
   });
 
   useEffect(() => {
@@ -17,11 +16,11 @@ function FormDashboard({ sectionKey, setDirtySections }) {
   }, [formData.email, formData.password, sectionKey, setDirtySections]);
 
   function handleChange(event) {
-    const { name, type, checked, value } = event.target;
+    const { name, value } = event.target;
 
     setFormData((currentData) => ({
       ...currentData,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: value,
     }));
   }
 
@@ -31,7 +30,6 @@ function FormDashboard({ sectionKey, setDirtySections }) {
     setFormData({
       email: "",
       password: "",
-      checked: false,
     });
 
     setDirtySections((currentSections) => ({
@@ -72,19 +70,6 @@ function FormDashboard({ sectionKey, setDirtySections }) {
             value={formData.password}
             onChange={handleChange}
           />
-        </div>
-        <div className="mb-3 form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-            name="checked"
-            checked={formData.checked}
-            onChange={handleChange}
-          />
-          <label className="form-check-label" htmlFor="exampleCheck1">
-            Check me out
-          </label>
         </div>
         <button type="submit" className="btn btn-primary">
           Submit
