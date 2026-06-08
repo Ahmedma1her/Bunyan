@@ -41,8 +41,9 @@ jobs:
         uses: hashicorp/setup-terraform@v4
 
       - name: Terraform Init
-        run: terraform init
-        working-directory: terraform
+        run: |
+          cd infra 
+          terraform init
 
       - name: Terraform Apply
         if: ${{ inputs.action == 'apply' }}
@@ -51,7 +52,6 @@ jobs:
       - name: Terraform Plan
         if: ${{ inputs.action == 'plan' }}
         run: terraform plan
-        working-directory: terraform
 
       - name: Terraform Destroy
         if: ${{ inputs.action == 'destroy' }}
