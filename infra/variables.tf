@@ -21,3 +21,7 @@ variable "igw_name" {
 variable "route_table_name" {
   type = string
 }
+variable "aws_security_group" {
+  type = string
+
+}

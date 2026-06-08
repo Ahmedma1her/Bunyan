@@ -44,3 +44,33 @@ resource "aws_route_table_association" "public" {
   subnet_id      = aws_subnet.public.id
   route_table_id = aws_route_table.public.id
 }
+resource "aws_security_group" "web_sg" {
+  name        = "web-security-group"
+  description = "Allow SSH and HTTP traffic"
+  vpc_id      = aws_vpc.main.id
+
+  # SSH access
+  ingress {
+    description = "SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = aws_security_group
+  }
+
+  # HTTP access
+  ingress {
+    description = "HTTP"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = aws_security_group
+  }
+
+
+  tags = {
+    Name = "maher-sg"
+  }
+}
+
+
