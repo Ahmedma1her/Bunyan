@@ -51,6 +51,7 @@ jobs:
       - name: Terraform Plan
         if: ${{ inputs.action == 'plan' }}
         run: terraform plan
+        working-directory: terraform
 
       - name: Terraform Destroy
         if: ${{ inputs.action == 'destroy' }}
