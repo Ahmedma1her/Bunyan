@@ -117,10 +117,10 @@ resource "aws_launch_template" "web" {
 
 # Auto Scaling Group - 2 instances across 2 AZs, min 2, max 4
 resource "aws_autoscaling_group" "web" {
-  name                = "bunyan-asg"
-  vpc_zone_identifier = [for subnet in aws_subnet.public : subnet.id]
-  target_group_arns   = []
-  health_check_type   = "EC2"
+  name                      = "bunyan-asg"
+  vpc_zone_identifier       = [for subnet in aws_subnet.public : subnet.id]
+  target_group_arns         = []
+  health_check_type         = "EC2"
   health_check_grace_period = 300
 
   min_size         = var.asg_min_size
